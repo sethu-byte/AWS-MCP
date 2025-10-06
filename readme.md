@@ -60,7 +60,7 @@ code --version
 
 # Create directory structure
 echo "[8/9] Creating directory structure..."
-mkdir -p ~/.aws/amazonq
+mkdir -p ~/.aws/amazonq  --use this
 mkdir -p ~/.aws/amazonnq
 mkdir -p ~/.config/Code/User
 mkdir -p ~/aws-docs-mcp
