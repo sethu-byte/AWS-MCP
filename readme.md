@@ -65,6 +65,23 @@ mkdir -p ~/.aws/amazonnq
 mkdir -p ~/.config/Code/User
 mkdir -p ~/aws-docs-mcp
 
+echo "[Optional] Creating default MCP config (~/.aws/amazonq/mcp.json)..."
+cat > ~/.aws/amazonq/mcp.json << 'EOF'
+{
+  "mcpServers": {
+    "awslabs.aws-documentation-mcp-server": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR",
+        "AWS_DOCUMENTATION_PARTITION": "aws"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+EOF
 echo "[9/9] Installation Complete!"
 echo ""
 echo "========================================="
@@ -689,3 +706,4 @@ If you encounter issues:
 ---
 
 **⭐ This documentation is for personal use and followers. Feel free to share!**
+
