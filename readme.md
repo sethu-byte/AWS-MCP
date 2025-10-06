@@ -50,7 +50,7 @@ echo "[6/9] Installing Amazon Q CLI..."
 wget https://desktop-release.q.us-east-1.amazonaws.com/latest/amazon-q.deb
 sudo dpkg -i amazon-q.deb
 sudo apt-get install -f -y
-rm amazon-q.deb
+#rm amazon-q.deb  -- not required
 q --version
 
 # Install VS Code
