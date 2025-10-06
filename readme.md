@@ -35,7 +35,7 @@ pip3 --version
 # Install AWS CLI
 echo "[4/9] Installing AWS CLI..."
 sudo apt install awscli -y
-# if the about cmd throws error then try sudo snap install aws-cli --classic
+# if the about cmd throws error, then try sudo snap install aws-cli --classic
 aws --version
 
 # Install UV Package Manager
