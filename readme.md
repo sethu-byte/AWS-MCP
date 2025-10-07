@@ -83,6 +83,29 @@ cat > ~/.aws/amazonq/mcp.json << 'EOF'
   }
 }
 EOF
+
+echo "add this for enabeling the mcp server via vscode for starting and stopping"
+cat > ~/.config/Code/User/mcp.json << 'EOF'
+{
+	"servers": {
+		"AWS Documentation MCP Server": {
+			"command": "uvx",
+			"args": [
+				"awslabs.aws-documentation-mcp-server@latest"
+			],
+			"env": {
+				"FASTMCP_LOG_LEVEL": "ERROR",
+				"AWS_DOCUMENTATION_PARTITION": "aws"
+			},
+			"disabled": false,
+			"autoApprove": [],
+			"type": "stdio"
+		}
+	},
+	"inputs": []
+}
+EOF
+
 echo "[9/9] Installation Complete!"
 echo ""
 echo "========================================="
