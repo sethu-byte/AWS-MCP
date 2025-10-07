@@ -699,7 +699,7 @@ If you encounter issues:
 ---
 
 **📅 Last Updated**: October 6, 2025  
-**👤 Author**: indianic  
+**👤 Author**: indianic (DevOps Team)  
 **✅ Status**: Production-Ready & Tested  
 **🎯 Tested On**: EC2 Ubuntu & Personal Ubuntu Systems  
 **📦 MCP Servers**: AWS Documentation, Cost Explorer, ECS
