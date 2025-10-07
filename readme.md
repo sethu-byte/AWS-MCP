@@ -33,10 +33,23 @@ python3 --version
 pip3 --version
 
 # Install AWS CLI
+# Install AWS CLI (with fallback)
 echo "[4/9] Installing AWS CLI..."
-sudo apt install awscli -y
-# if the about cmd throws error, then try sudo snap install aws-cli --classic
+
+if sudo apt install -y awscli; then
+    echo " AWS CLI installed successfully via apt."
+else
+    echo "apt installation failed. Trying snap installation..."
+    if sudo snap install aws-cli --classic; then
+        echo "AWS CLI installed successfully via snap."
+    else
+        echo "Failed to install AWS CLI via both apt and snap."
+        echo "Please check your network or repository settings."
+    fi
+fi
+
 aws --version
+
 
 # Install UV Package Manager
 echo "[5/9] Installing UV Package Manager..."
